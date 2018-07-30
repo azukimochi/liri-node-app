@@ -7,6 +7,7 @@ var keys = require('./keys.js');
 var activity = process.argv[2]; //to decide which API it will go through 
 var song = "";
 var movieName = "";
+var searchQuery = "";
 
 // _______Spotify search request_________________________________
 
@@ -121,11 +122,11 @@ function doWhatItSays() {
         console.log("The data: " + data);
         var dataArr = data.split(",");
         // console.log(dataArr);
-        var activity = dataArr[0];
-        var searchQuery = dataArr[1];
+        activity = dataArr[0];
+        searchQuery = dataArr[1];
         console.log("The activity: " + activity);
         console.log("The search query: " + searchQuery);
-
+        
         if (activity == "spotify-this-song") {
             song = searchQuery;
             searchSpotify();
@@ -134,14 +135,50 @@ function doWhatItSays() {
             movieName = searchQuery;
             searchOMDB();
         }
-
         if (activity == "my-tweets") {
             searchTwitter();
         }
     });
 }
 
-// __________Checks what the user wants to do with the application________________________
+// _________Log commands into log.txt_______________________
+
+// How to log the data into log.txt when you're not running twitter 
+function logDataWithQuery() {
+    var fs = require('fs');
+    var startingPrompt = "\n- Command Line: node liri.js ";
+    var query = movieName || song || searchQuery;
+    fs.appendFile("log.txt", startingPrompt + activity + " " + query, function(err) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log("The file 'log.txt' has been updated!");
+        }
+    });
+}
+
+// How to log the data into log.txt when you are running twitter 
+function logDataWithoutQuery() {
+    var fs = require('fs');
+    var startingPrompt = "\n- Command Line: node liri.js ";
+    fs.appendFile("log.txt", startingPrompt + activity, function(err) {
+        if (err) {
+            console.log(err);
+        } else {
+            console.log("The file 'log.txt' has been updated!");
+        }
+    });
+}
+
+function logData() {
+    if (activity != "my-tweets") {
+        logDataWithQuery();
+    } else {
+        logDataWithoutQuery();
+    }
+}
+
+// __________Checks what the user wants to do with the application if they've specified an activity
 function commandFunction() {
     
     // _______if the user wants to search a song_______
@@ -176,7 +213,16 @@ function commandFunction() {
     if (activity == "do-what-it-says") {
         doWhatItSays();
     }
+    logData();
 }
 
-
-commandFunction();
+// runs upon loading and checks if the user specified an activity.  If they didn't specify an activity, a list of options pop up. 
+if (activity) {
+    commandFunction();
+} else {
+    console.log("\nYou need to enter in a specific command.  Use one of the following:");
+    console.log("\n-To search a movie: 'movie-this' + <'insert movie name'>");
+    console.log("\n-To search a song: 'spotify-this-song' + <'insert song name'>");
+    console.log("\n-To show your last 20 tweets: 'my-tweets' (remember to enter your own screen name into liri.js and your twitter developer details into .env!)");
+    console.log("\n-To do what's in random.txt: 'do-what-it-says'");
+}
