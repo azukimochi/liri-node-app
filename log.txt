@@ -15,3 +15,13 @@
 - Command Line: node liri.js spotify-this-song happy birthday
 - Command Line: node liri.js movie-this Godzilla
 - Command Line: node liri.js spotify-this-song happy birthday
+- Command Line: node liri.js my-tweets
+- Command Line: node liri.js spotify-this-song friday
+- Command Line: node liri.js spotify-this-song The Sign
+- Command Line: node liri.js movie-this avengers
+- Command Line: node liri.js movie-this Mr.Nobody
+- Command Line: node liri.js do-what-it-says 
+- Command Line: node liri.js my-tweets
+- Command Line: node liri.js do-what-it-says 
+- Command Line: node liri.js spotify-this-song The Sign
+- Command Line: node liri.js do-what-it-says 

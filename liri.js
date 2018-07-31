@@ -119,13 +119,13 @@ function doWhatItSays() {
         if (error) {
             console.log(error);
         }
-        console.log("The data: " + data);
+        // console.log("The data: " + data);
         var dataArr = data.split(",");
         // console.log(dataArr);
         activity = dataArr[0];
         searchQuery = dataArr[1];
-        console.log("The activity: " + activity);
-        console.log("The search query: " + searchQuery);
+        // console.log("The activity: " + activity);
+        // console.log("The search query: " + searchQuery);
         
         if (activity == "spotify-this-song") {
             song = searchQuery;
