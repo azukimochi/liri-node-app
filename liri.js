@@ -224,5 +224,5 @@ if (activity) {
     console.log("\n-To search a movie: 'movie-this' + <'insert movie name'>");
     console.log("\n-To search a song: 'spotify-this-song' + <'insert song name'>");
     console.log("\n-To show your last 20 tweets: 'my-tweets' (remember to enter your own screen name into liri.js and your twitter developer details into .env!)");
-    console.log("\n-To do what's in random.txt: 'do-what-it-says'");
+    console.log("\n-To do what's in random.txt: 'do-what-it-says'\n");
 }

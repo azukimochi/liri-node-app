@@ -1,7 +1,8 @@
 # liri-node-app
-This is a command line node application called LIRI.  
 
-This node application was created using NodeJS, JavaScript, and NPM.  You will need to use your Terminal/Bash to make requests and retrieve responses. 
+This is a **command line node application** called LIRI.  
+
+This node application was created using Node.js, JavaScript, and NPM.  You will need to use your Terminal/Bash to make requests and retrieve responses. 
 
 The creator of this application is azukimochi and she can be contacted via https://github.com/azukimochi.
 
@@ -20,11 +21,17 @@ TWITTER_ACCESS_TOKEN_KEY= <'insert yours'>
 TWITTER_ACCESS_TOKEN_SECRET= <'insert yours'>
 
 ___________________________________________________
-HOW TO USE:
+## HOW TO USE:
 
-In your Terminal/Bash, you will need to enter in a specific command after 'node liri.js'.  Use one of the following:
+In your Terminal/Bash, you will need to enter in a specific command after **node liri.js**.  
 
--To search a movie: 'movie-this'  <'insert movie name'>
+![](https://azukimochi.github.io/liri-node-app/README_images/screenshot-start.png)
+
+Use one of the following:
+
+**-To search a movie:** 'movie-this'  <'insert movie name'>
+
+![](https://azukimochi.github.io/liri-node-app/README_images/screenshot-movie.png)
 
 -To search a song: 'spotify-this-song'  <'insert song name'>
 

@@ -25,3 +25,5 @@
 - Command Line: node liri.js do-what-it-says 
 - Command Line: node liri.js spotify-this-song The Sign
 - Command Line: node liri.js do-what-it-says 
+- Command Line: node liri.js movie-this avengers
+- Command Line: node liri.js movie-this avengers
