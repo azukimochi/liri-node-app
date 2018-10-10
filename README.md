@@ -6,18 +6,22 @@ This node application was created using Node.js, JavaScript, and NPM.  You will 
 
 The creator of this application is azukimochi and she can be contacted via https://github.com/azukimochi.
 
-Please ensure to download the entire repo in order to have access to the appropriate files.  Please ensure to install your own node modules and to create a .env file.  Please enter in your own keys into the .env file, ensuring it looks like below: 
+Please ensure to download the entire repo in order to have access to the appropriate files.  Please ensure to install your own node modules for all dependencies and to create a .env file.  Please enter in your own keys into the .env file, ensuring it looks like the following: 
 
 # Spotify API keys
 
 SPOTIFY_ID= <'insert yours'>
+
 SPOTIFY_SECRET= <'insert yours'>
 
 # Twitter API keys
 
 TWITTER_CONSUMER_KEY= <'insert yours'>
+
 TWITTER_CONSUMER_SECRET= <'insert yours'>
+
 TWITTER_ACCESS_TOKEN_KEY= <'insert yours'>
+
 TWITTER_ACCESS_TOKEN_SECRET= <'insert yours'>
 
 ___________________________________________________
