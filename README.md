@@ -27,16 +27,22 @@ In your Terminal/Bash, you will need to enter in a specific command after **node
 
 ![](https://azukimochi.github.io/liri-node-app/README_images/screenshot-start.png)
 
+Each prompt will request information and give a response with details pertaining to your query.  When searching for a movie, you will get the movie's details from OMDB; when searching for a song, you'll get the song's details from Spotify, and when searching for your last 20 tweets, you'll get these tweet details from Twitter.  The command 'do-what-it-says' will make a request based on the text written in random.txt. 
+
 Use one of the following:
 
-**-To search a movie:** 'movie-this'  <'insert movie name'>
+**-To search a movie:** 'node liri.js movie-this'  <'insert movie name'>
 
 ![](https://azukimochi.github.io/liri-node-app/README_images/screenshot-movie.png)
 
--To search a song: 'spotify-this-song'  <'insert song name'>
+**-To search a song:** 'node liri.js spotify-this-song'  <'insert song name'>
 
--To show your last 20 tweets: 'my-tweets' (remember to enter your own screen name into liri.js and your twitter developer details into .env!)
+![](https://azukimochi.github.io/liri-node-app/README_images/screenshot-spotify.png)
 
--To do what's in random.txt: 'do-what-it-says'
+**-To show your last 20 tweets:** 'node liri.js my-tweets' (remember to enter your own screen name into liri.js and your twitter developer details into .env!)
 
-Each prompt will request information and give a response with details pertaining to your query.  When searching for a movie, you will get the movie's details from OMDB; when searching for a song, you'll get the song's details from Spotify, and when searching for your last 20 tweets, you'll get these tweet details from Twitter.  The command 'do-what-it-says' will make a request based on the text written in random.txt. 
+**-To do what's in random.txt:** 'node liri.js do-what-it-says'
+
+All command line queries are logged in log.txt.
+
+![](https://azukimochi.github.io/liri-node-app/README_images/screenshot-log.png)
